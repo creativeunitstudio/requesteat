@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo" />
+        </div>
+        <button id="cart-button">Cart (0)</button>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+    <div class="main-form">
+        <div class="form-container">
+            <h2>Banking Details for EFT</h2>
+                <p>Please transfer the payment to the following details, and confirm the details before making a payment, We are not to be liable for incorrect transaction details:</p>
+                <ul>
+                    <li><strong>Account Name:</strong> Requesteat</li>
+                    <li><strong>Account Number:</strong> 1444105424</li>
+                    <li><strong>Bank Name:</strong> Capitec Bank</li>
+                    <li><strong>Branch Code:</strong> 470010</li>
+                    <li><strong>Reference:</strong> MC Motswi</li>
+                </ul>
+                <form>
+            <form id="eftForm" action="#" method="POST" onsubmit="sendToWhatsApp(event)">
+                <h2>EFT Payment Form</h2>
+                <label for="name">Customer's Reference:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="amount">Amount to Transfer:</label>
+                <input type="number" id="amount" name="amount" required>
+                
+                <label for="account">Bank Account Number:</label>
+                <input type="text" id="account" name="account" required>
+                
+                <label for="date">Date of Transfer:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+        <script>
+            function sendToWhatsApp(event) {
+                event.preventDefault();
+    
+                // Get form values
+                const name = document.getElementById('name').value;
+                const amount = document.getElementById('amount').value;
+                const account = document.getElementById('account').value;
+                const date = document.getElementById('date').value;
+    
+                // Create a message
+                const message = `EFT Payment Details:\nName: ${name}\nAmount: ${amount}\nAccount Number: ${account}\nDate: ${date}`;
+    
+                // WhatsApp URL format
+                const phoneNumber = '27726962588'; // Replace with your WhatsApp number
+                const encodedMessage = encodeURIComponent(message);
+                const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+                // Redirect to WhatsApp
+                window.location.href = url;
+            }
+            function toggleForm() {
+                const form = document.getElementById('bankingDetailsForm');
+                form.classList.toggle('show');
+            }
+        </script>
+
+    
+        
+    <!-- Popup Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <button id="clear-cart">Clear</button>
+            <button id="checkout-button">WhatsApp Checkout</button>
+            <a href="payment.html">
+            <button class="eft-button">Buy Now</button></a>         
+        </div>
+    </div>
+    <!-- WhatsApp Chat Widget -->
+    <div id="whatsapp-widget">
+        <a href="https://wa.me/27726962588" target="_blank" id="whatsapp-link">
+            <img src="assets/img/contacticons/whatsappwidget.png" alt="WhatsApp Chat">
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+    
+    <footer class="footer">
+        <div class="footer-icons">
+            <a href="index.html" class="footer-icon">
+                <img src="assets/img/footershortcuts/home.png" alt="Home">
+            </a>
+            <a href="products.html" class="footer-icon">
+                <img src="assets/img/footershortcuts/products.png" alt="Products">
+            </a> 
+            <div class="footer-popup">
+                <div class="menus">
+                    <button class="menus-buttons" onclick="toggleMenu()">☰</button>
+                    <div class="popups" id="popupMenu">
+                        <a href="menu/locatestores.html">Nearest Stores</a>
+                        <a href="menu/paymentsinfo.html">Payments Info</a>
+                        <a href="menu/delivery.html">Delivery Service</a>
+                        <a href="menu/vacancies">Vacancies</a>
+                    </div>
+                </div>
+            </div>
+            <a href="register.html" class="footer-icon">
+                <img src="assets/img/footershortcuts/register.png" alt="Register">
+            </a>
+            <a href="contact.html" class="footer-icon">
+                <img src="assets/img/footershortcuts/contact.png" alt="Contact">
+            </a>
+        </div>
+    </footer>
+    </footer>
+</body>
+</html>

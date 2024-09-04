@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo"> <img src="assets/img/logo.png" alt="Logo"> </div>
+      <button id="cart-button">Cart (0)</button> </header>
+    <!-- Main Content -->
+    <main>
+      <section id="filter-section">
+        <h2>Filter Products</h2>
+        <form id="filter-form"> <label for="category">Category:</label>
+          <select id="category" name="category">
+            <option value="products">Select Category</option>
+            <option value="african">African</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="burger">Burger</option>
+            <option value="coffee">Coffee</option>
+            <option value="chicken">Chicken</option>
+            <option value="kota">Kota</option>
+            <option value="meal">Meal</option>
+            <option value="pasta">Pasta</option>
+            <option value="seafoods">Sea Foods</option>
+            <!-- Add more categories as needed -->
+          </select>
+          <button type="button" onclick="applyFilters()">Apply Filters</button>
+        </form>
+      </section>
+      <div class="slideshow-container">
+        <div class="slide fade"> <img src="assets/img/slides/1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide fade"> <img src="assets/img/slides/2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide fade"> <img src="assets/img/slides/3.jpg" alt="Slide 3">
+        </div>
+        <div class="slide fade"> <img src="assets/img/slides/4.jpg" alt="Slide 3">
+        </div>
+        <!-- Add more slides as needed --> </div>
+      <section id="search-section"> <input id="search-input" placeholder="Search products..."
+
+          onkeyup="filterProducts()" type="text"> </section>
+      <div class="features-heading">
+        <h2>Menu</h2>
+      </div>
+      <section id="products" class="product-grid">
+        <div class="product" data-price="49.99"> <img src="assets/img/categories/product01.jpg"
+          alt="Product 13">
+          <h2>Pap &amp; Mala</h2>
+          <h6>African</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R49.99</p>
+          <a href="customs/product13.html">
+          <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+       
+        <div class="product" data-price="149.99"> <img src="assets/img/categories/product02.jpg"
+            alt="Product 14">
+          <h2>Chicken Fiesta</h2>
+          <h6>Chicken</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R149.99</p> 
+          <a href="customs/product14.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★☆☆☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="14.99"> <img src="assets/img/categories/product03.jpg"
+           alt="Product 15">
+          <h2>Omelette Toast</h2>
+          <h6>Breakfast</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R14.99</p> 
+          <a href="customs/product15.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+       
+        <div class="product" data-price="74.99"> <img src="assets/img/categories/product04.jpg"
+            alt="Product 16">
+          <h2>11 Fried Wingaz</h2>
+          <h6>Chicken</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R74.99</p> 
+          <a href="customs/product16.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★☆☆☆☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="59.99"> <img src="assets/img/categories/product05.jpg"
+            alt="Product 17">
+          <h2>1/4 Chicken Salad</h2>
+          <h6>Chicken</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R59.99</p> 
+          <a href="customs/product17.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="114.99"> <img src="assets/img/categories/product06.jpg"
+            alt="Product 18">
+          <h2>Lobster Platter</h2>
+          <h6>Seafoods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R114.99</p> 
+          <a href="customs/product18.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+       
+        <div class="product" data-price="89.99"> <img src="assets/img/categories/product07.jpg"
+            alt="Product 19">
+          <h2>8 Prawns Meal</h2>
+          <h6>Seafoods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R89.99</p> 
+          <a href="customs/product19.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★☆☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="19.99"> <img src="assets/img/categories/product08.jpg"
+            alt="Product 20">
+          <h2>Spaghetti Herbs</h2>
+          <h6>Pasta</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p> 
+          <a href="customs/product20.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★☆☆☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="119.99"> <img src="assets/img/categories/product09.jpg"
+            alt="Product 21">
+          <h2>Oyster Platter</h2>
+          <h6>Seafoods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R119.99</p> 
+          <a href="customs/product21.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+       
+        <div class="product" data-price="29.99"> <img src="assets/img/categories/product10.jpg"
+            alt="Product 22">
+          <h2>Mayo Spaghetti</h2>
+          <h6>Pasta</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R29.99</p> 
+          <a href="customs/product22.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="64.99"> <img src="assets/img/categories/product11.jpg"
+            alt="Product 23">
+          <h2>Samp &amp; Beefstew</h2>
+          <h6>African</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R64.99</p> 
+          <a href="customs/product23.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="79.99"> <img src="assets/img/categories/product12.jpg"
+            alt="Product 24">
+          <h2>Wacky Breakfast</h2>
+          <h6>Breakfast</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R79.99</p> 
+          <a href="customs/product24.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="59.99"> <img src="assets/img/categories/product13.jpg"
+            alt="Product 25">
+          <h2>2 Piece Grilled Chicken</h2>
+          <h6>Chicken</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R59.99</p> 
+          <a href="customs/product25.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="79.99"> <img src="assets/img/categories/product14.jpg"
+            alt="Product 26">
+          <h2>Calamari Dish</h2>
+          <h6>Seafoods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R79.99</p> 
+          <a href="customs/product26.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="49.99"> <img src="assets/img/categories/product15.jpg"
+            alt="Product 27">
+          <h2>Beacon Sunnyside </h2>
+          <h6>Breakfast</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R49.99</p> 
+          <a href="customs/product27.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="22.99"> <img src="assets/img/categories/product16.jpg"
+            alt="Product 28">
+          <h2>Indiana Jones Spaghetti</h2>
+          <h6>Pasta</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R22.99</p> 
+          <a href="customs/product28.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="99.99"> <img src="assets/img/categories/product17.jpg"
+            alt="Product 29">
+          <h2>18 Oyster Dish</h2>
+          <h6>Seafoods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R99.99</p> 
+          <a href="customs/product29.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="89.99"> <img src="assets/img/categories/product18.jpg"
+            alt="Product 30">
+          <h2>7 Piece Fried Chicken</h2>
+          <h6>Chicken</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R89.99</p> 
+          <a href="customs/product30.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="59.99"> <img src="assets/img/categories/product19.jpg"
+            alt="Product 31">
+          <h2>Mac &amp; Cheese</h2>
+          <h6>Pasta</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R59.99</p> 
+          <a href="customs/product31.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+      
+        <div class="product" data-price="44.99"> <img src="assets/img/categories/product20.jpg"
+            alt="Product 32">
+          <h2>Samp &amp; Turkey</h2>
+          <h6>African</h6> 
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R44.99</p> 
+          <a href="customs/product32.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="39.99"> <img src="assets/img/categories/product21.jpg"
+            alt="Product 33">
+          <h2>Regular Show Burger</h2>
+          <h6>Burger</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R39.99</p> 
+          <a href="customs/product33.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="18.99"> <img src="assets/img/categories/product22.jpg"
+            alt="Product 34">
+          <h2>Omelette</h2>
+          <h6>Breakfast</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R18.99</p> 
+          <a href="customs/product34.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="49.99"> <img src="assets/img/categories/product23.jpg"
+            alt="Product 35">
+          <h2>Veggie Burger</h2>
+          <h6>Burger</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R49.99</p> 
+          <a href="customs/product35.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="17.99"> <img src="assets/img/categories/product24.jpg"
+            alt="Product 36">
+          <h2>Asian Macarroni</h2>
+          <h6>Pasta</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R17.99</p> 
+          <a href="customs/product36.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+       
+        <div class="product" data-price="34.99"> <img src="assets/img/categories/product25.jpg"
+            alt="Product 37">
+          <h2>Toasted Mayo Sandwitch</h2>
+          <h6>Breakfast</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R34.99</p> 
+          <a href="customs/product37.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="79.99"> <img src="assets/img/categories/product26.jpg"
+            alt="Product 38">
+          <h2>Lobster Cutts</h2>
+          <h6>Seafoods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R79.99</p> 
+          <a href="customs/product38.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+       
+        <div class="product" data-price="39.99"> <img src="assets/img/categories/product27.jpg"
+            alt="Product 39">
+          <h2>Triple Decker Toast</h2>
+          <h6>Breakfast</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R39.99</p> 
+          <a href="customs/product39.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+       
+        <div class="product" data-price="44.99"> <img src="assets/img/categories/product28.jpg"
+            alt="Product 40">
+          <h2>Eezi Burger</h2>
+          <h6>Burger</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R44.99</p> 
+          <a href="customs/product40.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="33.99"> <img src="assets/img/categories/product29.jpg"
+            alt="Product 41">
+          <h2>Real Beef Burger</h2>
+          <h6>Burger</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R33.99</p> 
+          <a href="customs/product41.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+     
+        <div class="product" data-price="59.99"> <img src="assets/img/categories/product30.jpg"
+            alt="Product 42">
+          <h2>Kasi Burger</h2>
+          <h6>Burger</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R59.99</p> 
+          <a href="customs/product42.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="99.99"> <img src="assets/img/categories/product31.jpg"
+            alt="Product 43">
+          <h2>Red Sushi</h2>
+          <h6>Seafoods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R99.99</p> 
+          <a href="customs/product43.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="54.99"> <img src="assets/img/categories/product32.jpg"
+            alt="Product 44">
+          <h2>Lite Breakfast</h2>
+          <h6>Breakfast</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R54.99</p> 
+          <a href="customs/product44.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="159.99"> <img src="assets/img/categories/product33.jpg"
+            alt="Product 45">
+          <h2>White Sushi</h2>
+          <h6>Seafoods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R159.99</p> 
+          <a href="customs/product45.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+       
+        <div class="product" data-price="109.99"> <img src="assets/img/categories/product34.jpg"
+            alt="Product 46">
+          <h2>Mamas Saucy Burger</h2>
+          <h6>Burger</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R109.99</p> 
+          <a href="customs/product46.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="29.99"> <img src="assets/img/categories/product35.jpg"
+            alt="Product 47">
+          <h2>Mini Launch Burger</h2>
+          <h6>Burger</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R29.99</p> 
+          <a href="customs/product47.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="19.99"> <img src="assets/img/categories/product36.jpg"
+            alt="Product 48">
+          <h2>Iced &amp; Cuppocino</h2>
+          <h6>Coffee</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p> 
+          <a href="customs/product48.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="29.99"> <img src="assets/img/categories/product37.jpg"
+            alt="Product 49">
+          <h2>Black Coffee</h2>
+          <h6>Coffee</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R29.99</p> 
+          <a href="customs/product49.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+       
+        <div class="product" data-price="34.99"> <img src="assets/img/categories/product38.jpg"
+            alt="Product 50">
+          <h2>Regular Kasi Burger</h2>
+          <h6>Burger</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R34.99</p> 
+          <a href="customs/product50.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+       
+        <div class="product" data-price="29.99"> <img src="assets/img/categories/product39.jpg"
+            alt="Product 51">
+          <h2>Chessy Burger</h2>
+          <h6>Burger</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R29.99</p> 
+          <a href="customs/product51.html">
+          <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="24.99"> <img src="assets/img/categories/product40.jpg"
+            alt="Product 52">
+          <h2>Italian Whipped Coffee</h2>
+          <h6>Coffee</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R24.99</p> 
+          <a href="customs/product52.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+     
+        <div class="product" data-price="79.99"> <img src="assets/img/categories/product41.jpg"
+            alt="Product 53">
+          <h2>Pap &amp; Mogodu</h2>
+          <h6>African</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R79.99</p> 
+          <a href="customs/product53.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="119.99"> <img src="assets/img/categories/product42.jpg"
+            alt="Product 54">
+          <h2>Nigerian Fufu</h2>
+          <h6>African</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R119.99</p> 
+          <a href="customs/product54.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="49.99"> <img src="assets/img/categories/product43.jpg"
+            alt="Product 55">
+          <h2>Mogodu</h2>
+          <h6>African</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R49.99</p> 
+          <a href="customs/product55.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+       
+        <div class="product" data-price="18.99"> <img src="assets/img/categories/product44.jpg"
+            alt="Product 56">
+          <h2>Cuppocino Gold</h2>
+          <h6>Coffee</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R18.99</p> 
+          <a href="customs/product56.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★☆☆☆</span> </div>
+        </div>
+      
+        <div class="product" data-price="189.99"> <img src="assets/img/categories/product45.jpg"
+            alt="Product 57">
+          <h2>Seafood Platter</h2>
+          <h6>Seafoods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R189.99</p> 
+          <a href="customs/product57.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="29.99"> <img src="assets/img/categories/product46.jpg"
+            alt="Product 58">
+          <h2>Meatball Pasta</h2>
+          <h6>Pasta</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R29.99</p> 
+          <a href="customs/product58.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+      
+        <div class="product" data-price="114.99"> <img src="assets/img/categories/product47.jpg"
+            alt="Product 59">
+          <h2>Fully Loaded Meal</h2>
+          <h6>Chicken</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R114.99</p> 
+          <a href="customs/product59.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="109.99"> <img src="assets/img/categories/product48.jpg"
+            alt="Product 60">
+          <h2>5 Pices Fried Chicken</h2>
+          <h6>Chicken</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R109.99</p> 
+          <a href="customs/product60.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="19.99"> <img src="assets/img/categories/product49.jpg"
+            alt="Product 61">
+          <h2>Deep Fried Fish</h2>
+          <h6>Seafoods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p> 
+          <a href="customs/product61.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+        <div class="product" data-price="49.99"> <img src="assets/img/categories/product50.jpg"
+            alt="Product 62">
+          <h2>Grilled Chicken Veggies</h2>
+          <h6>Chicken</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R49.99</p> 
+          <a href="customs/product62.html">
+            <button>Customize</button></a>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+      </section>
+    </main>
+    <!-- Popup Modal -->
+    <div id="cart-modal" class="modal">
+      <div class="modal-content"> <span class="close">×</span>
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+          <!-- Cart items will be dynamically added here -->
+        </ul>
+        <button id="clear-cart">Clear</button> <button id="checkout-button">WhatsApp Checkout</button>
+        <a href="payment.html"> <button class="eft-button">Buy Now</button></a>
+      </div>
+    </div>
+    <!-- WhatsApp Chat Widget -->
+    <div id="whatsapp-widget"> <a href="https://wa.me/27726962588" target="_blank"
+
+        id="whatsapp-link"> <img src="assets/img/contacticons/whatsappwidget.png"
+
+          alt="WhatsApp Chat"> </a> </div>
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+    <footer class="footer">
+      <div class="footer-icons"> <a href="index.html" class="footer-icon"> <img
+
+            src="assets/img/footershortcuts/home.png" alt="Home"> </a> <a href="products.html"
+
+          class="footer-icon"> <img src="assets/img/footershortcuts/focusedicon/products.png"
+
+            alt="Products"> </a>
+            <div class="footer-popup">
+              <div class="menus">
+                  <button class="menus-buttons" onclick="toggleMenu()">☰</button>
+                  <div class="popups" id="popupMenu">
+                      <a href="menu/locatestores.html">Nearest Stores</a>
+                      <a href="menu/paymentsinfo.html">Payments Info</a>
+                      <a href="menu/delivery.html">Delivery Service</a>
+                      <a href="menu/vacancies">Vacancies</a>
+                  </div>
+              </div>
+          </div>
+        <a href="register.html" class="footer-icon"> <img src="assets/img/footershortcuts/register.png"
+
+            alt="Register"> </a> <a href="contact.html" class="footer-icon"> <img
+
+            src="assets/img/footershortcuts/contact.png" alt="Contact"> </a> </div>
+    </footer>
+  </body>
+</html>

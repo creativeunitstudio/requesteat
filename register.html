@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo" />
+        </div>
+        <button id="cart-button">Cart (0)</button>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        
+    <!-- Popup Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <button id="clear-cart">Clear</button>
+            <button id="checkout-button">WhatsApp Checkout</button>
+            <a href="payment.html">
+            <button class="eft-button">Buy Now</button></a>         
+        </div>
+    </div>
+    <div class="container-register">
+        <h1>Business Registration Form</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="businessName">Business Name:</label>
+                <input type="text" id="businessName" name="businessName" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="whatSells">What It Sells:</label>
+                <textarea id="whatSells" name="whatSells" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="businessNumber">Business Number:</label>
+                <input type="text" id="businessNumber" name="businessNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="whatsappNumber">WhatsApp Number:</label>
+                <input type="text" id="whatsappNumber" name="whatsappNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" readonly>
+                <input type="button" value="Get Current Location" onclick="getLocation()">
+            </div>
+            <div class="form-group">
+                <input type="button" value="Submit" onclick="submitForm()">
+            </div>
+        </form>
+    </div>
+    <!-- WhatsApp Chat Widget -->
+    <div id="whatsapp-widget">
+        <a href="https://wa.me/27726962588" target="_blank" id="whatsapp-link">
+            <img src="assets/img/contacticons/whatsappwidget.png" alt="WhatsApp Chat">
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+    
+    <footer class="footer">
+        <div class="footer-icons">
+            <a href="index.html" class="footer-icon">
+                <img src="assets/img/footershortcuts/home.png" alt="Home">
+            </a>
+            <a href="products.html" class="footer-icon">
+                <img src="assets/img/footershortcuts/products.png" alt="Products">
+            </a> 
+            <div class="footer-popup">
+                <div class="menus">
+                    <button class="menus-buttons" onclick="toggleMenu()">☰</button>
+                    <div class="popups" id="popupMenu">
+                        <a href="menu/locatestores.html">Nearest Stores</a>
+                        <a href="menu/paymentsinfo.html">Payments Info</a>
+                        <a href="menu/delivery.html">Delivery Service</a>
+                        <a href="menu/vacancies">Vacancies</a>
+                    </div>
+                </div>
+            </div>
+            <a href="register.html" class="footer-icon">
+                <img src="assets/img/footershortcuts/focusedicon/register.png" alt="Register">
+            </a>
+            <a href="contact.html" class="footer-icon">
+                <img src="assets/img/footershortcuts/contact.png" alt="Contact">
+            </a>
+        </div>
+    </footer>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pap & Mala</title>
+    <link rel="stylesheet" href="../assets/css/customs.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../assets/img/logo.png" alt="Logo" />
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Customize</h1>
+        <div class="customization-form">
+            <select id="food-item">
+                <option value="Pap & Mala" data-image="../assets/img/6.jpg">African</option>
+             </select>
+            <img id="product-image" src="../assets/img/6.jpg" alt="Product Image" style="width: 600px;  height: auto; 
+            border-radius: 5px; display: flex; justify-content: center; max-width: 100%; padding: 0;">
+        <h3>Pap & Mala</h3>
+        <h4>R39.99</h4>
+        <div class="discription-toppings">
+            <label for="toppings">Choose Toppings:</label>
+            <input type="checkbox" id="xtra cheese" value="Xtra Cheese"> Xtra Cheese
+            <input type="checkbox" id="achaar" value="Achaar"> Achaar
+            <input type="checkbox" id="chakalaka" value="Chakalaka"> Chakalaka
+            <input type="checkbox" id="egg" value="Egg"> Egg
+        </div>
+
+        <div class="discription-toppings">
+            <label for="">Delivery:</label>
+            <input type="checkbox" id="pickup" value="Pickup"> Pickup
+            <input type="checkbox" id="yes" value="Yes"> Yes
+        </div>
+
+        <div class="discription-size">
+            <label for="size">Select Size:</label>
+            <select id="size">
+                <option value="Regular">Regular</option>
+                <option value="Medium">Medium</option>
+                <option value="Fully Loaded">Fully Loaded</option>
+            </select>
+        </div> 
+
+        <div class="discription-button">
+            <button id="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total Price: R<span id="total-price">0.00</span></p>
+            <button id="clear-cart">Clear</button>
+            <button id="whatsapp-checkout">WhatsApp Checkout</button>
+            <a href="../payment.html">
+                <button class="eft-button">Buy Now</button></a>  
+        </div>
+    </div> 
+
+    <img src="../assets/img/cart.png" alt="Cart Icon" class="cart-icon" id="cart-icon"></div>
+
+    <script src="../assets/js/customs.js"></script> 
+
+    <footer class="footer">
+
+        <div class="footer-icons">
+            <a href="../index.html" class="footer-icon">
+                <img src="../assets/img/footershortcuts/home.png" alt="Home">
+            </a>
+            <a href="../products.html" class="footer-icon">
+                <img src="../assets/img/footershortcuts/products.png" alt="Products">
+            </a> 
+            <div class="footer-popup">
+                <div class="menus">
+                    <button class="menus-buttons" onclick="toggleMenu()">☰</button>
+                    <div class="popups" id="popupMenu">
+                        <a href="../menu/locatestores.html">Nearest Stores</a>
+                        <a href="../menu/paymentsinfo.html">Payments Info</a>
+                        <a href="../menu/delivery.html">Delivery Service</a>
+                        <a href="../menu/vacancies">Vacancies</a>
+                    </div>
+                </div>
+            </div>
+            <a href="../register.html" class="footer-icon">
+                <img src="../assets/img/footershortcuts/register.png" alt="Register">
+            </a>
+            <a href="../contact.html" class="footer-icon">
+                <img src="../assets/img/footershortcuts/contact.png" alt="Contact">
+            </a>
+        </div>
+    </footer>
+    </footer>
+</body>
+</html>

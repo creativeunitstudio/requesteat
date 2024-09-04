@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo" />
+        </div>
+        <button id="cart-button">Cart (0)</button>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        
+    <!-- Popup Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <button id="clear-cart">Clear</button>
+            <button id="checkout-button">WhatsApp Checkout</button>
+            <a href="payment.html">
+            <button class="eft-button">Buy Now</button></a>         
+        </div>
+    </div>
+
+    <div class="container-contacts">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <!-- Email -->
+            <a href="mailto:requesteat@gmail.com" target="_blank">
+                <img src="assets/img/contacticons/mail.png" alt="Email Icon"> Email: requesteat@gmail.com
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/27726962588" target="_blank">
+                <img src="assets/img/contacticons/whatsapp.png" alt="WhatsApp Icon"> WhatsApp: +2772 696 2588
+            </a>
+            <!-- Phone -->
+            <a href="tel:+27726962588" target="_blank">
+                <img src="assets/img/contacticons/contact.png" alt="Phone Icon"> Contact Number: +2772 696 2588
+            </a>
+            <!-- Facebook -->
+            <a href="https://facebook.com/requesteat" target="_blank">
+                <img src="assets/img/contacticons/facebook.png" alt="Facebook Icon"> facebook.com/requesteat
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com/requesteat" target="_blank">
+                <img src="assets/img/contacticons/instagram.png" alt="Instagram Icon"> Instagram.com/requesteat
+            </a>
+            <!-- Google Maps -->
+            <a href="https://maps.google.com/?q=your+address" target="_blank">
+                <img src="assets/img/contacticons/location.png" alt="Google Maps Icon"> 7670 Mosia Street Winnie Mandela Tembisa
+            </a>
+        </div>
+    </div>
+
+    
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+    
+    <footer class="footer">
+        <div class="footer-icons">
+            <a href="index.html" class="footer-icon">
+                <img src="assets/img/footershortcuts/home.png" alt="Home">
+            </a>
+            <a href="products.html" class="footer-icon">
+                <img src="assets/img/footershortcuts/products.png" alt="Products">
+            </a> 
+            <div class="footer-popup">
+                <div class="menus">
+                    <button class="menus-buttons" onclick="toggleMenu()">☰</button>
+                    <div class="popups" id="popupMenu">
+                        <a href="menu/locatestores.html">Nearest Stores</a>
+                        <a href="menu/paymentsinfo.html">Payments Info</a>
+                        <a href="menu/delivery.html">Delivery Service</a>
+                        <a href="menu/vacancies">Vacancies</a>
+                    </div>
+                </div>
+            </div>
+            <a href="register.html" class="footer-icon">
+                <img src="assets/img/footershortcuts/register.png" alt="Register">
+            </a>
+            <a href="contact.html" class="footer-icon">
+                <img src="assets/img/footershortcuts/focusedicon/contact.png" alt="Contact">
+            </a>
+        </div>
+    </footer>
+    </footer>
+</body>
+</html>

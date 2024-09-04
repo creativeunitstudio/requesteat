@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Stores</title>
+    <link rel="stylesheet" href="../assets/css/locatestores.css">
+</head>
+<body>
+      <!-- Header -->
+      <header>
+        <div class="logo">
+            <img src="../assets/img/logo.png" alt="Logo" />
+        </div>
+        <button id="cart-button">Cart (0)</button>
+    </header>
+
+<main>
+     
+    <ul id="store-list">
+        <!-- Stores will be dynamically inserted here -->
+    </ul>
+    <div id="store-details" class="hidden">
+        <h2>Store Details</h2>
+        <img id="store-image" src="" alt="Store Image" />
+        <p id="store-name"></p>
+        <p id="store-address"></p>
+        <p id="store-distance"></p>
+        <a id="store-link" href="" target="_blank">Visit Store Page</a>
+        <button id="close-details">Close</button>
+    </div>
+    <h1>Nearby Stores</h1>
+</main>
+
+    <!-- Popup Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <button id="clear-cart">Clear</button>
+            <button id="checkout-button">WhatsApp Checkout</button>
+            <a href="../payment.html">
+            <button class="eft-button">Buy Now</button></a>      
+        </div>
+    </div>
+
+    <!-- WhatsApp Chat Widget -->
+    <div id="whatsapp-widget">
+        <a href="https://wa.me/27726962588" target="_blank" id="whatsapp-link">
+            <img src="../assets/img/contacticons/whatsappwidget.png" alt="WhatsApp Chat">
+        </a>
+    </div>
+
+
+    <script src="../assets/js/locatestores.js"></script>
+    <script src="../assets/js/script.js"></script> 
+    <footer class="footer">
+
+        <div class="footer-icons">
+            <a href="../index.html" class="footer-icon">
+                <img src="../assets/img/footershortcuts/home.png" alt="Home">
+            </a>
+            <a href="../products.html" class="footer-icon">
+                <img src="../assets/img/footershortcuts/products.png" alt="Products">
+            </a> 
+            <div class="footer-popup">
+                <div class="menus">
+                    <button class="menus-buttons" onclick="toggleMenu()">☰</button>
+                    <div class="popups" id="popupMenu">
+                        <a href="../menu/locatestores.html">Nearest Stores</a>
+                        <a href="../menu/paymentsinfo.html">Payments Info</a>
+                        <a href="../menu/delivery.html">Delivery Service</a>
+                        <a href="../menu/vacancies">Vacancies</a>
+                    </div>
+                </div>
+            </div>
+            <a href="../register.html" class="footer-icon">
+                <img src="../assets/img/footershortcuts/register.png" alt="Register">
+            </a>
+            <a href="../contact.html" class="footer-icon">
+                <img src="../assets/img/footershortcuts/contact.png" alt="Contact">
+            </a>
+        </div>
+    </footer>
+    </footer>
+</body>
+</html>
