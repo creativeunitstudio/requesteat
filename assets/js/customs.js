@@ -129,3 +129,22 @@ foodItem.addEventListener('change', updateProductImage);
 function toggleMenu() {
     document.getElementById('popupMenu').classList.toggle('show');
 }
+
+// Function to store the current page URL in sessionStorage
+function storeCurrentPage() {
+    sessionStorage.setItem('lastVisitedPage', window.location.href);
+}
+
+// Function to navigate to the last visited page if available
+function navigateToLastVisitedPage() {
+    const lastVisitedPage = sessionStorage.getItem('lastVisitedPage');
+    if (lastVisitedPage && lastVisitedPage !== window.location.href) {
+        window.location.href = lastVisitedPage;
+    }
+}
+
+// Add event listeners for storing the current page and navigating on load
+window.addEventListener('load', function() {
+    storeCurrentPage();
+    navigateToLastVisitedPage();
+});
