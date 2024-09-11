@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liquorstore</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo"> <img src="assets/img/logo.png" alt="Logo"> </div>
+      <button id="cart-button">Cart (0)</button> </header>
+    <!-- Main Content -->
+    <main>
+      <section id="filter-section">
+        <h2>Filter Products</h2>
+        <form id="filter-form"> <label for="category">Category:</label>
+          <select id="category" name="category">
+            <option value="products">Select Category</option>
+			<option value="beer">Beer</option>
+			<option value="brandy">Brandy</option>
+			<option value="cocktails">Cocktails</option>
+            <option value="cider">Cider</option>
+			<option value="cream liqueur">Cream Liqueur</option>
+			<option value="gin">Gin</option>
+            <option value="rum & tequila">Rum & Tequila</option>
+			<option value="vodka">Vodka</option>
+            <option value="whisky">Whisky</option>
+			<option value="wine">Wine</option>
+            <!-- Add more categories as needed -->
+          </select>
+          <button type="button" onclick="applyFilters()">Apply Filters</button>
+        </form>
+      </section>
+      <div class="slideshow-container">
+        <div class="slide fade"> <img src="assets/img/slides/1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide fade"> <img src="assets/img/slides/2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide fade"> <img src="assets/img/slides/3.jpg" alt="Slide 3">
+        </div>
+        <div class="slide fade"> <img src="assets/img/slides/4.jpg" alt="Slide 3">
+        </div>
+        <!-- Add more slides as needed --> </div>
+      <section id="search-section"> <input id="search-input" placeholder="Search products..."
+
+          onkeyup="filterProducts()" type="text"> </section>
+      <div class="features-heading">
+        <h2>Menu</h2>
+      </div>
+      <section id="products" class="product-grid">
+        <div class="product" data-price="164.99"> <img src="assets/img/liquorstore/product001.jpg"
+            alt="Product 001">
+          <h2>Savanna Premium Angry Lemon 6 x 500ml NRB</h2>
+          <h6>cider</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R164.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★☆☆☆</span> </div>
+        </div> 
+		
+		<div class="product" data-price="149.99"> <img src="assets/img/liquorstore/product109.jpg"
+            alt="Product 109">
+          <h2>CIAO Vodcano Spirit Cooler Cocktail 2L</h2>
+          <h6>cocktails</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R139.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+        
+		<div class="product" data-price="319.99"> <img src="assets/img/liquorstore/product002.jpg"
+            alt="Product 002">
+          <h2>Carling Black Label Beer 24 x 500ml CANS</h2>
+          <h6>beer</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R319.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★☆☆</span> </div>
+        </div>
+        
+		<div class="product" data-price="289.99"> <img src="assets/img/liquorstore/product003.jpg"
+            alt="Product 003">
+          <h2>Hansa Pilsener Beer 24 x 330ml NRB</h2>
+          <h6>beer</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R289.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★☆☆</span> </div>
+        </div> 
+		
+		<div class="product" data-price="139.99"> <img src="assets/img/liquorstore/product112.jpg"
+            alt="Product 112">
+          <h2>CIAO Gin & Mango Spirit Cooler Cocktail 2L</h2>
+          <h6>cocktails</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R139.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="309.99"> <img src="assets/img/liquorstore/product102.jpg"
+            alt="Product 102">
+          <h2>Savanna Premium Angry Lemon 12 x 500ml NRB</h2>
+          <h6>cider</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R309.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★☆☆☆</span> </div>
+        </div>
+        
+		<div class="product" data-price="289.99"> <img src="assets/img/liquorstore/product004.jpg"
+            alt="Product 004">
+          <h2>Carling Black Label Beer 24 x 330ml NRB</h2>
+          <h6>beer</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R289.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★☆☆</span> </div>
+        </div>
+        
+		<div class="product" data-price="119.99"> <img src="assets/img/liquorstore/product005.jpg"
+            alt="Product 005">
+          <h2>Corona Extra Cerveza 6 x 410ml CANS</h2>
+          <h6>beer</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R119.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+		<div class="product" data-price="72.99"> <img src="assets/img/liquorstore/product006.jpg"
+            alt="Product 006">
+          <h2>Corona Extra Cerveza 6 x 335ml NRB</h2>
+          <h6>beer</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R119.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div>
+        
+		<div class="product" data-price="229.99"> <img src="assets/img/liquorstore/product007.jpg"
+            alt="Product 007">
+          <h2>Corona Extra Cerveza 12 x 410ml CANS</h2>
+          <h6>beer</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R229.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★☆</span> </div>
+        </div> 
+		
+		<div class="product" data-price="139.99"> <img src="assets/img/liquorstore/product110.jpg"
+            alt="Product 110">
+          <h2>CIAO Cosmo Spirit Cooler Cocktail 2L</h2>
+          <h6>cocktails</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R139.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="119.99"> <img src="assets/img/liquorstore/product103.jpg"
+            alt="Product 103">
+          <h2>Savanna Premium Angry Lemon 6 x 330ml NRB</h2>
+          <h6>cider</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R119.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★☆☆☆</span> </div>
+        </div>
+        
+		<div class="product" data-price="319.99"> <img src="assets/img/liquorstore/product008.jpg"
+	       alt="Product 008">
+          <h2>Flying Fish Pressed Lemon Beer 24 x 330ml NRB</h2>
+          <h6>beer</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R319.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★☆☆</span> </div>
+        </div>
+       
+	   <div class="product" data-price="94.99"> <img src="assets/img/liquorstore/product009.jpg"
+            alt="Product 009">
+          <h2>Hooch Strawberry Spirit Cooler 6 x 275ml NRB</h2>
+          <h6>cider</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R94.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★☆☆</span> </div>
+        </div> 
+		
+		<div class="product" data-price="449.99"> <img src="assets/img/liquorstore/product104.jpg"
+            alt="Product 104">
+          <h2>Savanna Premium Angry Lemon 24 x 330ml NRB</h2>
+          <h6>cider</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R449.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★☆☆☆</span> </div>
+        </div>
+        
+		<div class="product" data-price="359.99"> <img src="assets/img/liquorstore/product010.jpg"
+            alt="Product 010">
+          <h2>Belgium Stella Artois 24 x 410ml CANS</h2>
+          <h6>beer</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R359.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★☆☆</span> </div>
+        </div>
+       
+	   <div class="product" data-price="119.99"> <img src="assets/img/liquorstore/product011.jpg"
+            alt="Product 011">
+          <h2>Brutal Fruit Ruby Apple Spritzer 6 x 500ml CANS</h2>
+          <h6>cider</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R119.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+       
+	   <div class="product" data-price="299.99"> <img src="assets/img/liquorstore/product012.jpg"
+            alt="Product 012">
+          <h2>Castle Lite Beer 24 x 330ml NRB</h2>
+          <h6>beer</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R299.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="359.99"> <img src="assets/img/liquorstore/product105.jpg"
+            alt="Product 105">
+          <h2>Heineken Premium Lager 24 x 330ml NRB</h2>
+          <h6>beer</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R359.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div> 
+		
+		<div class="product" data-price="29.99"> <img src="assets/img/liquorstore/product106.jpg"
+            alt="Product 106">
+          <h2>Savanna Premium Dry 6 x 330ml NRB</h2>
+          <h6>cider</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R119.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★☆☆☆</span> </div>
+        </div>
+       
+       
+	   <div class="product" data-price="42.99"> <img src="assets/img/liquorstore/product013.jpg"
+            alt="Product 013">
+          <h2>Brutal Fruit Litchi Spritzer 6 x 500ml CANS</h2>
+          <h6>cider</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R119.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="309.99"> <img src="assets/img/liquorstore/product107.jpg"
+            alt="Product 107">
+          <h2>Savanna Premium Dry 12 x 500ml NRB</h2>
+          <h6>cider</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R309.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★☆☆☆</span> </div>
+        </div> 
+		
+		<div class="product" data-price="139.99"> <img src="assets/img/liquorstore/product111.jpg"
+            alt="Product 111">
+          <h2>CIAO Paradise Bliss Spirit Cooler Cocktail 2L</h2>
+          <h6>cocktails</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R139.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+        
+		<div class="product" data-price="234.99"> <img src="assets/img/liquorstore/product014.jpg"
+            alt="Product 014">
+          <h2>Smirnoff 1818 Vodka 1 Litre</h2>
+          <h6>vodka</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R234.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div> 
+		
+		<div class="product" data-price="439.99"> <img src="assets/img/liquorstore/product108.jpg"
+            alt="Product 108">
+          <h2>Savanna Premium Dry 24 x 330ml NRB</h2>
+          <h6>cider</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R439.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★☆☆☆</span> </div>
+        </div>
+        
+		<div class="product" data-price="219.99"> <img src="assets/img/liquorstore/product015.jpg"
+            alt="Product 015">
+          <h2>KWV Five Brandy 5years 750ml</h2>
+          <h6>brandy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R219.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+        
+		<div class="product" data-price="22.99"> <img src="assets/img/liquorstore/product017.jpg"
+            alt="Product 017">
+          <h2>Doritos Sweet Chilli Snack 145g </h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R22.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="39.99"> <img src="assets/img/liquorstore/product016.jpg"
+            alt="Product 016">
+          <h2>Nola Original  Mayonnaise 750g</h2>
+          <h6>sauces & dressing</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R39.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div> 
+		
+		<div class="product" data-price="54.99"> <img src="assets/img/liquorstore/product018.jpg"
+            alt="Product 018">
+          <h2>Tastic Rice Long Grain Parboiled 2kg</h2>
+          <h6>essential foods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R54.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product019.jpg"
+            alt="Product 019">
+          <h2>Fatti's & Moni's Pasta Screws 500g</h2>
+          <h6>essential foods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product020.jpg"
+            alt="Product 020">
+          <h2>Fatti's and Moni's Macaroni 500g</h2>
+          <h6>essential foods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="42.99"> <img src="assets/img/liquorstore/product021.jpg"
+            alt="Product 021">
+          <h2>Maggi Chicken Noodles 5 x 68g</h2>
+          <h6>essential foods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R42.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="22.99"> <img src="assets/img/liquorstore/product022.jpg"
+            alt="Product 022">
+          <h2>Lays Potato Chips Salted 145g</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R22.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="79.99"> <img src="assets/img/liquorstore/product023.jpg"
+            alt="Product 023">
+          <h2>Kellogs Corn Flakes Original 750g</h2>
+          <h6>cereal</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R79.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div> 
+		
+		<div class="product" data-price="139.99"> <img src="assets/img/liquorstore/product109.jpg"
+            alt="Product 109">
+          <h2>White Star Super Maize Meal 10kg</h2>
+          <h6>essential foods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R139.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div> 
+		
+		<div class="product" data-price="114.99"> <img src="assets/img/liquorstore/product110.jpg"
+            alt="Product 110">
+          <h2>Ace Super Maize Meal 5kg</h2>
+          <h6>essential foods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R114.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="49.99"> <img src="assets/img/liquorstore/product024.jpg"
+            alt="Product 024">
+          <h2>Bokomo Weet-Bix Wholegrain 900g</h2>
+          <h6>cereal</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R49.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="22.99"> <img src="assets/img/liquorstore/product025.jpg"
+            alt="Product 025">
+          <h2>Simba Creamy Cheddar Flav 145g</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R22.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="18.99"> <img src="assets/img/liquorstore/product026.jpg"
+            alt="Product 026">
+          <h2>Nik Naks Original Cheese 145g</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R18.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="49.99"> <img src="assets/img/liquorstore/product027.jpg"
+            alt="Product 027">
+          <h2>Crosse & Blackwell Tangy Mayonnaise 750g</h2>
+          <h6>sauces & dressing</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R49.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div> 
+		
+		<div class="product" data-price="39.99"> <img src="assets/img/liquorstore/product029.jpg"
+            alt="Product 029">
+          <h2>Ms HS Balls Original Chutney 470g</h2>
+          <h6>sauces & dressing</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R39.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div> 
+		
+		<div class="product" data-price="21.99"> <img src="assets/img/liquorstore/product030.jpg"
+            alt="Product 030">
+          <h2>Bakers Tennis Classic Biscuits 200g</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R21.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product031.jpg"
+            alt="Product 031">
+          <h2>Oreo Original Milk Cookie Biscuits 128g</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div> 
+		
+		<div class="product" data-price="16.99"> <img src="assets/img/liquorstore/product032.jpg"
+            alt="Product 032">
+          <h2>Full Farm Fresh Cabbage Head</h2>
+          <h6>fruit & veg</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R16.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product033.jpg"
+            alt="Product 033">
+          <h2>Rhodes Chakalaka Hot & Spicy 400g</h2>
+          <h6>canned food</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div> 
+		
+		<div class="product" data-price="189.99"> <img src="assets/img/liquorstore/product034.jpg"
+            alt="Product 034">
+          <h2>Olof Bergh Brandewyn Solera 750ml</h2>
+          <h6>brandy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R189.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="179.99"> <img src="assets/img/liquorstore/product036.jpg"
+            alt="Product 036">
+          <h2>Amarula Cream Liqueur 750ml</h2>
+          <h6>cream liqueur</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R179.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="59.99"> <img src="assets/img/liquorstore/product035.jpg"
+            alt="Product 035">
+          <h2>Always Maxi Night Duo 16s Sanitary Pads</h2>
+          <h6>women</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R59.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div> 
+		
+		<div class="product" data-price="199.99"> <img src="assets/img/liquorstore/product037.jpg"
+            alt="Product 037">
+          <h2>Klipdrift Smooth Brandy 750ml</h2>
+          <h6>brandy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R199.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="69.99"> <img src="assets/img/liquorstore/product038.jpg"
+            alt="Product 038">
+          <h2>Sunlight Regular Dishwashing Liquid 1.5l</h2>
+          <h6>cleaning</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R69.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="99.99"> <img src="assets/img/liquorstore/product039.jpg"
+            alt="Product 039">
+          <h2>Nescafe Ricoffy Pouch 800g Value Refill</h2>
+          <h6>coffee &amp; tea</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R99.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★☆☆</span> </div>
+        </div>
+
+		<div class="product" data-price="89.99"> <img src="assets/img/liquorstore/product040.jpg"
+            alt="Product 040">
+          <h2>Brutal Fruit Ruby Apple Spritzer 6 x 275ml</h2>
+          <h6>alcohol</h6>
+          <h5>Not for sale to persons under 18</h5>
+          <p>R89.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+      
+	  <div class="product" data-price="94.99"> <img src="assets/img/liquorstore/product041.jpg"
+            alt="Product 041">
+          <h2>Flying Fish Pressed Lemon Beer 6 x 330ml</h2>
+          <h6>alcohol</h6>
+          <h5>Not for sale to persons under 18</h5>
+          <p>R94.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+        
+		<div class="product" data-price="129.99"> <img src="assets/img/liquorstore/product042.jpg"
+            alt="Product 042">
+          <h2>Nescafe Classic Full Bodied Coffee 200g</h2>
+          <h6>coffee &amp; tea</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R129.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="42.99"> <img src="assets/img/liquorstore/product043.jpg"
+            alt="Product 043">
+          <h2>Jik Lemon Fresh Scented Bleach 1.5l</h2>
+          <h6>cleaning</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R42.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+       
+	   <div class="product" data-price="34.99"> <img src="assets/img/liquorstore/product044.jpg"
+            alt="Product 044">
+          <h2>Adcock Ingram Panado Tablets 24 Tablets</h2>
+          <h6>medication</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R34.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+        
+		<div class="product" data-price="47.99"> <img src="assets/img/liquorstore/product045.jpg"
+            alt="Product 045">
+          <h2>Spekko Rice Parboiled Long Grain 2kg</h2>
+          <h6>essential foods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R47.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+        
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product046.jpg"
+            alt="Product 046">
+          <h2>Simba Potato Chips Mrs Balls Chutney 120g</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+       
+	   <div class="product" data-price="34.99"> <img src="assets/img/liquorstore/product047.jpg"
+            alt="Product 047">
+          <h2>Domestos Lemon Stain Removal Thick 750ml</h2>
+          <h6>cleaning</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R34.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+        
+		<div class="product" data-price="54.99"> <img src="assets/img/liquorstore/product049.jpg"
+            alt="Product 049">
+          <h2>Joko Regular Tagless Tea Bags 100 Pack</h2>
+          <h6>coffee &amp; tea</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R34.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+        
+		<div class="product" data-price="59.99"> <img src="assets/img/liquorstore/product048.jpg"
+            alt="Product 048">
+          <h2>Clover Traditional Plain Feta Cheese 400g</h2>
+          <h6>dairy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R59.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="1.99"> <img src="assets/img/liquorstore/product050.jpg"
+            alt="Product 050">
+          <h2>Dettol Eventone Pomegranate Soap 175g</h2>
+          <h6>bath</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R18.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+        
+		<div class="product" data-price="18.99"> <img src="assets/img/liquorstore/product051.jpg"
+            alt="Product 051">
+          <h2>Dettol Hygene Soap Fresh 175g</h2>
+          <h6>bath</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R18.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+       
+	   <div class="product" data-price="77.99"> <img src="assets/img/liquorstore/product052.jpg"
+            alt="Product 052">
+          <h2>Dairymaid Choc-cara-nilla Ice Cream 1.8L</h2>
+          <h6>dairy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R77.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+        
+		<div class="product" data-price="34.99"> <img src="assets/img/liquorstore/product053.jpg"
+            alt="Product 053">
+          <h2>Domestos Whitening Thick Bleach Cleaner 750ml</h2>
+          <h6>cleaning</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R34.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+        
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product054.jpg"
+            alt="Product 054">
+          <h2>Domestos Purple Stain Removal Thick 750ml</h2>
+          <h6>cleaning</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div> 
+		
+		<div class="product" data-price="29.99"> <img src="assets/img/liquorstore/product056.jpg"
+            alt="Product 055">
+          <h2>Bakers Eet-Su-Mor Shortbread Biscuits</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R29.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="199.99"> <img src="assets/img/liquorstore/product055.jpg"
+            alt="Product 056">
+          <h2>Commando Cask Matured Brandy 750ml</h2>
+          <h6>brandy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R199.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="219.99"> <img src="assets/img/liquorstore/product057.jpg"
+            alt="Product 057">
+          <h2>Fish Eagle Potstil Brandy 750ml</h2>
+          <h6>brandy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R219.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product058.jpg"
+            alt="Product 058">
+          <h2>Clover Full Cream Milk UHT Process 6 x 1L</h2>
+          <h6>dairy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product059.jpg"
+            alt="Product 059">
+          <h2>Stork Country Spread 40% Fat</h2>
+          <h6>dairy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="34.99"> <img src="assets/img/liquorstore/product061.jpg"
+            alt="Product 060">
+          <h2>Original Iced Pina Colada 300ml</h2>
+          <h6>cocktails</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R34.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product060.jpg"
+            alt="Product 061">
+          <h2>Five Roses Ceylon Blend Tea 102 bags</h2>
+          <h6>coffee & tea</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product062.jpg"
+            alt="Product 062">
+          <h2>Laarger Pure Rooibos 80 bags</h2>
+          <h6>coffee & tea</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product063.jpg"
+            alt="Product 063">
+          <h2>Lucky Star Pilchards Tomato Tin Fish 155g</h2>
+          <h6>canned</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product064.jpg"
+            alt="Product 064">
+          <h2>Colgate Triple Action Original 100ml</h2>
+          <h6>bath</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product065.jpg"
+            alt="Product 065">
+          <h2>Bakers Classic Choc Biscuits 200g</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product066.jpg"
+            alt="Product 066">
+          <h2>Bakers Blue Lable Marie Biscuits 200g</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product067.jpg"
+            alt="Product 067">
+          <h2>Golden Cloud Cake Wheat Flour 2.5kg</h2>
+          <h6>bakery</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product069.jpg"
+            alt="Product 069">
+          <h2>Freshpak Pure Rooibos Tea 80 bags</h2>
+          <h6>coffee & tea</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="399.99"> <img src="assets/img/liquorstore/product068.jpg"
+            alt="Product 068">
+          <h2>KWV Ten Brandy 10years 750ml</h2>
+          <h6>brandy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R399.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product070.jpg"
+            alt="Product 070">
+          <h2>Clover Low Fat Milk Long Life 6 x 1L</h2>
+          <h6>dairy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product071.jpg"
+            alt="Product 071">
+          <h2>Cadburry Original Lunch Bar Chocolate</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="17.99"> <img src="assets/img/liquorstore/product072.jpg"
+            alt="Product 072">
+          <h2>Cadburry Dairy Milk Whole Nut</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R17.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="36.99"> <img src="assets/img/liquorstore/product073.jpg"
+            alt="Product 073">
+          <h2>Nescafe Ricoffy Blended Coffee 750g</h2>
+          <h6>coffee & tea</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R36.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product074.jpg"
+            alt="Product 074">
+          <h2>Protex Fresh Antigerm Bath Soap 150g</h2>
+          <h6>bath</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="49.99"> <img src="assets/img/liquorstore/product075.jpg"
+            alt="Product 075">
+          <h2>McCain Delicious Mixed Vegetables 1kg</h2>
+          <h6>fruit & veg</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R49.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="35.99"> <img src="assets/img/liquorstore/product076.jpg"
+            alt="Product 076">
+          <h2>Danone Ultra Mel Vanilla Flavoured Custard 1L</h2>
+          <h6>dairy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R35.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product077.jpg"
+            alt="Product 077">
+          <h2>Nivea Men Black & White Fresh Roll On 50ml</h2>
+          <h6>man</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="184.99"> <img src="assets/img/liquorstore/product078.jpg"
+            alt="Product 078">
+          <h2>Wellington VO Brandy 750ml</h2>
+          <h6>brandy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R184.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="43.99"> <img src="assets/img/liquorstore/product079.jpg"
+            alt="Product 079">
+          <h2>Snowflake Cake Wheat Flour 2.5kg</h2>
+          <h6>bakery</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R43.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="26.99"> <img src="assets/img/liquorstore/product080.jpg"
+            alt="Product 080">
+          <h2>Coca-Cola Original Plastic Bottle 2L</h2>
+          <h6>drinks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R26.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="18.99"> <img src="assets/img/liquorstore/product081.jpg"
+            alt="Product 081">
+          <h2>Blue Ribbon White Toaster Bread 700g</h2>
+          <h6>bakery</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R18.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="26.99"> <img src="assets/img/liquorstore/product082.jpg"
+            alt="Product 082">
+          <h2>Rhodes Butter Beans in Brine 410g</h2>
+          <h6>canned</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R26.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product083.jpg"
+            alt="Product 083">
+          <h2>Simba Potato Chips Smoked Beef 120g</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="299.99"> <img src="assets/img/liquorstore/product084.jpg"
+            alt="Product 084">
+          <h2>Heineken Premium Lager NRB 24 x 330ml</h2>
+          <h6>alcohol</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R299.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="69.99"> <img src="assets/img/liquorstore/product085.jpg"
+            alt="Product 085">
+          <h2>White Star Super Maize Meal 5kg</h2>
+          <h6>essential foods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R69.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="7.99"> <img src="assets/img/liquorstore/product086.jpg"
+            alt="Product 086">
+          <h2>Knorr Brown Onion Thickening Soup 50g</h2>
+          <h6>soup & spices</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R7.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="39.99"> <img src="assets/img/liquorstore/product087.jpg"
+            alt="Product 087">
+          <h2>Knorr Mild Breyani Rice Mate 275g</h2>
+          <h6>soup & spices</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R39.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="79.99"> <img src="assets/img/liquorstore/product088.jpg"
+            alt="Product 088">
+          <h2>Sunlight Tropical Sensations 2in1 Powder 2kg</h2>
+          <h6>cleaning</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R79.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="219.99"> <img src="assets/img/liquorstore/product089.jpg"
+            alt="Product 089">
+          <h2>Richelieu International Brandy 750ml</h2>
+          <h6>brandy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R219.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="24.99"> <img src="assets/img/liquorstore/product090.jpg"
+            alt="Product 090">
+          <h2>Nestle Kitkat 8 Finger Milk Chocolate Bar 85g</h2>
+          <h6>snacks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R24.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="89.99"> <img src="assets/img/liquorstore/product091.jpg"
+            alt="Product 091">
+          <h2>Nestle Milo Malt Powder Drink 500g</h2>
+          <h6>coffee & tea</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R89.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="19.99"> <img src="assets/img/liquorstore/product092.jpg"
+            alt="Product 092">
+          <h2>Fatti's & Moni's Spaghetti 500g</h2>
+          <h6>essential foods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="36.99"> <img src="assets/img/liquorstore/product093.jpg"
+            alt="Product 093">
+          <h2>Liqui-Fruit Cranberry Cooler Juice 1L</h2>
+          <h6>drinks</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R36.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="184.99"> <img src="assets/img/liquorstore/product094.jpg"
+            alt="Product 094">
+          <h2>Sunfoil Pure Sunflower Cooking Oil 5L</h2>
+          <h6>essential foods</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R184.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="69.99"> <img src="assets/img/liquorstore/product095.jpg"
+            alt="Product 095">
+          <h2>Vaseline Blue Seal Original Pure Petroleum Jelly 450ml</h2>
+          <h6>bath</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R69.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="26.99"> <img src="assets/img/liquorstore/product096.jpg"
+            alt="Product 096">
+          <h2>Knorrox Beef Stock Cubes Meaty Flav 24 x 10g</h2>
+          <h6>soup & spices</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R26.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="24.99"> <img src="assets/img/liquorstore/product097.jpg"
+            alt="Product 097">
+          <h2>Kotex Maxi Thick Pads - All Nighter 8 Pack Plus Wings</h2>
+          <h6>women</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R24.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="81.99"> <img src="assets/img/liquorstore/product098.jpg"
+            alt="Product 098">
+          <h2>Sea Harvest Fish Fingers Frozen 600g</h2>
+          <h6>frozen</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R81.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="39.99"> <img src="assets/img/liquorstore/product099.jpg"
+            alt="Product 099">
+          <h2>Bull Brand Corned Meat & Cereal Tin 300g</h2>
+          <h6>canned</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R39.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="79.99"> <img src="assets/img/liquorstore/product100.jpg"
+            alt="Product 100">
+          <h2>Kellogg's All Bran Breakfast Flakes 750g</h2>
+          <h6>cereal</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R79.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div> 
+		
+		<div class="product" data-price="199.99"> <img src="assets/img/liquorstore/product119.jpg"
+            alt="Product 119">
+          <h2>KWV Three Brandy 3years 750ml</h2>
+          <h6>brandy</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R199.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+		<div class="product" data-price="34.99"> <img src="assets/img/liquorstore/product126.jpg"
+            alt="Product 126">
+		<h2>Original Strawberry Daquiri 300ml</h2>
+          <h6>cocktails</h6>
+          <h5>7670 Winnie Mandela Zone 1 Mosia Street</h5>
+          <p>R34.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <div class="rating"> <span>★★★★★</span> </div>
+        </div>
+		
+      </section>
+    </main>
+    <!-- Popup Modal -->
+    <div id="cart-modal" class="modal">
+      <div class="modal-content"> <span class="close">×</span>
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+          <!-- Cart items will be dynamically added here -->
+        </ul>
+        <button id="clear-cart">Clear</button> <button id="checkout-button">WhatsApp
+          Checkout</button> <a href="payment.html"> <button class="eft-button">Buy
+            Now</button></a> </div>
+    </div>
+    <!-- WhatsApp Chat Widget -->
+    <div id="whatsapp-widget"> <a href="https://wa.me/27726962588" target="_blank"
+
+        id="whatsapp-link"> <img src="assets/img/contacticons/whatsappwidget.png"
+
+          alt="WhatsApp Chat"> </a> </div>
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+    <footer class="footer">
+      <div class="footer-icons"> <a href="index.html" class="footer-icon"> <img
+
+            src="assets/img/footershortcuts/home.png" alt="Home"> </a> <a href="products.html"
+
+          class="footer-icon"> <img src="assets/img/footershortcuts/products.png"
+
+            alt="Products"> </a>
+        <div class="footer-popup">
+          <div class="menus"> <button class="menus-buttons" onclick="toggleMenu()">☰</button>
+            <div class="popups" id="popupMenu"> <a href="menu/locatestores.html">Nearest
+                Stores</a> <a href="menu/paymentsinfo.html">Payments Info</a> <a
+
+                href="menu/delivery.html">Delivery Service</a> <a href="menu/vacancies">Vacancies</a>
+            </div>
+          </div>
+        </div>
+        <a href="register.html" class="footer-icon"> <img src="assets/img/footershortcuts/register.png"
+
+            alt="Register"> </a> <a href="contact.html" class="footer-icon"> <img
+
+            src="assets/img/footershortcuts/contact.png" alt="Contact"> </a> </div>
+    </footer>
+  </body>
+</html>
