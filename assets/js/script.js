@@ -154,6 +154,41 @@ document.getElementById('signupForm').onsubmit = function(event) {
     modal.style.display = "none";
 }
 
+function setRegistrationStatus() {
+    localStorage.setItem('registered', 'true');
+    document.cookie = "registered=true; path=/; max-age=" + (60 * 60 * 24 * 30); // 30 days
+}
+
+function shouldShowModal() {
+    return localStorage.getItem('registered') !== 'true' && !getCookie('registered');
+}
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+function showModal() {
+    if (shouldShowModal()) {
+        document.getElementById('signupModal').style.display = 'block';
+    }
+}
+
+function closeModal() {
+    document.getElementById('signupModal').style.display = 'none';
+}
+
+document.getElementById('signupForm').onsubmit = function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    setRegistrationStatus();
+    closeModal();
+};
+
+window.onload = function() {
+    showModal();
+};
+
 let slideIndex = 0;
 
 function showSlides() {
@@ -328,4 +363,23 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         applyFilters();
     });
+});
+
+// Function to store the current page URL in sessionStorage
+function storeCurrentPage() {
+    sessionStorage.setItem('lastVisitedPage', window.location.href);
+}
+
+// Function to navigate to the last visited page if available
+function navigateToLastVisitedPage() {
+    const lastVisitedPage = sessionStorage.getItem('lastVisitedPage');
+    if (lastVisitedPage && lastVisitedPage !== window.location.href) {
+        window.location.href = lastVisitedPage;
+    }
+}
+
+// Add event listeners for storing the current page and navigating on load
+window.addEventListener('load', function() {
+    storeCurrentPage();
+    navigateToLastVisitedPage();
 });
